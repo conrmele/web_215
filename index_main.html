@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Free lance</title>
+<link rel="stylesheet" href="css/webfont.css" type="text/css" /> 
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<link rel="stylesheet" href="css/colorbox.css" />
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+		
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body id="index" class="home">
+
+<!--  PAGE 1 -->
+	<a href="#" onClick="content('wrapper')">
+	<section id="entry" class="blah" >
+			
+				<article>
+					<div id="logon">
+						<h1>LOG ON.</h1>
+					</div>
+				</article>
+			
+	</section>
+	</a>
+<!-- END 1 -->
+
+<!-- PAGE 2 -->
+<div id="wrapper" class="blah">
+		<nav>
+			<ul>
+				<li><a href="#" onClick="content('wrapper')">HOME</a></li>
+				<li><a class='inline' href="#contract">/CONTRACT</a></li>
+				<li><a href="#" onClick="content('brand')">/BRAND</a></li>
+				<li><a href="#">/SKILLS</a></li>
+				<li><a href="#">/CONTACT</a></li>
+			</ul>
+
+		</nav>
+		
+	<div class="content1">
+	    
+		<h2>HI. MY NAME IS RIGO.</h2>
+	</div>	
+	
+	<div class="content2">
+		<p>
+		I am a warrior of the web and a conqueror of browsers.<br />
+        My goal is to create beautiful and functional websites.
+		</p>
+	</div>
+	<div class="content3">
+		<p>I would love to collaborate and learn new ways to enhance the web.</p>
+	</div>
+	
+	<div id="footer">
+		<div class="fbox"><p>SUBSCRIBE.</p></div>
+	</div>
+	
+	<div id="co">
+			
+			Rodrigo Melendez © Copyright 
+			<script type="text/javascript">document.write(new Date().getFullYear());</script>
+			<br />
+			<div id="html5">
+				<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fstudents.cpcc.edu%2F~rmelend0%2Fweb215%2F">
+					<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="115" height="40" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+				</a>
+			</div>
+			<div id="css">
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+					<img style="border:0;"
+						src="http://jigsaw.w3.org/css-validator/images/vcss-blue" width="115" height="40" 
+						alt="Valid CSS!" />
+				</a>
+			</div>
+	</div>
+	
+
+	<div style='display:none'>
+				<div id='contract' style='padding:10px; background:#fff;'>
+				
+				<p>I, <strong>Rodrigo Melendez</strong> agree to abide by the terms of 
+				the course contract in my Spring 2014 WEB215-85 Web Markup & Scripting with my instructor, D.I. von Briesen.
+				I understand that all work that I do on my school and personal website will be publicly available to the world, 
+				and will not put information there that is inappropriate for schoolwork, or that I wish to keep private.
+				I also understand that it is my work that counts for attendance, not logins or showing up for class. 
+				As such, failure to turn in assignments may show as absences.
+				</p>
+				<p><strong>Signed by:</strong>Rodrigo Melendez</p>
+				<p>On:
+				<script type="text/javascript">
+				var date = new Date();
+				var str = date.toDateString();
+				document.write(str);
+				</script>
+				</p>
+				</div>
+	</div>
+	
+</div><!-- END 2 -->
+
+
+<!-- PAGE 3 -->
+<div id="brand" class="blah">
+
+
+	<!-- Clone the navigation bar -->
+	<b></b>
+	<script>
+	$("nav").clone().prependTo( "b" );
+	</script>
+	
+	<!-- end of clone -->
+	
+	<div class="content1">
+	    <h3>BP EDITORIAL.</h3>
+	</div>
+	
+	<div class="content2">
+		<p>
+		BP Editorial coming soon. Stay tune.<br />
+        Purpose for the website is to help writers proof read their books and publish the best work at a low maintenance cost.
+		</p>
+	</div>
+	
+	<div class="content3">
+		<ul>
+			<li><strong>The name:</strong> Book Puebla Editorial.</li>
+			<li><strong>The concept:</strong> Proofread writers documents and help them publish their work.</li>
+			<li><strong>Colours:</strong> dimgray, darkslategray,white and whitesmoke .</li>
+			<li><strong>Fonts:</strong> 'Nunito', Arial, serif</li>
+			<li><strong>CatchPhrase:</strong> warrior of the web.</li>
+		</ul>
+	</div>
+		
+		<div class="icons">
+			<a class="facebook" href="#" title="facebook"></a>
+			<a class="github" href="https://github.com/conrmele"   title="github"></a>
+			<a class="lastfm" href="http://www.last.fm/user/melenrdr"  title="lastfm"></a>
+			
+			<img src="images/social-icons/facebook.png" alt="facebook"/>
+			<img src="images/social-icons/github.png" alt="github"/>
+			<img src="images/social-icons/lastfm.png" alt="lastfm" />
+		</div>
+	
+	
+	<!-- Clone the navigation bar -->
+	<b></b>
+	<script>
+	$("#co").clone().prependTo( "span" );	
+	</script>
+	
+	<!-- end of clone -->
+ 
+</div><!-- END 3 -->
+
+<script src="scripts/logon.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="scripts/jquery.colorbox.js"></script>
+		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".inline").colorbox({inline:true, width:"50%"});
+			
+			});
+		</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+/* reset */
+*{margin:0;padding:0;}
+a {text-decoration:none; color: inherit;}
+/* main */
+body { background-color: #f7f7f7; width:900px; margin:0 auto; cursor:pointer;}
+
+
+/* log on box style */
+section:first-child  article:first-child  {
+   /*fade: #5d81ab; 
+     hover #637081*/
+   color: #446388;
+   background: #79a2d0;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+   box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+   width: 300px; 
+   height: 130px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -150px; /* Half of Width */
+   margin-top: -65px;  /* Half of Height */
+   /*  
+	http://css-tricks.com/snippets/css/exactly-center-an-imagediv-horizontally-and-vertically/
+	Negative margins are exactly half the height and width, 
+	which pull the element back into perfect center. 
+	Only works with elements of a fixed height/width.
+   */
+}
+
+
+section article #logon {
+   margin:0 auto;
+   /*background-color:#ccc; */
+   width: 210px;
+   height: 60px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -105px;
+   margin-top: -30px;
+   text-shadow: 0px 1px 1px #5d81ab;
+}
+
+section:first-child  article:hover {
+color: #fff;
+background-color:#363f49; 
+}
+
+/*  Font use example h1 { font-family: ‘Metrophobic’, Arial, serif; font-weight: 400; } */
+section  article:first-child  h1{ font-family: 'Nunito', Arial, serif; font-weight: 700; font-size:3em;}
+
+
+
+/* start of web page template. */
+/* don't change display type this is what makes it appear after you 
+click on the logon box.
+This also allows you to change pages.
+*/
+#wrapper {
+   display:none; 
+}
+
+#brand{
+   display:none; 
+}
+
+
+/* navigation bar */
+/* problem 1, invert order or menu.
+Keep parent nav ul floating right while list Items float left.
+*/
+nav ul  {
+	overflow:hidden; 
+	margin:20px 0 0 0; 
+	padding:0;
+	list-style-type:none;
+	float:right;
+}
+
+nav ul li {
+	float: left; 
+	margin:0;
+	line-height: 1; 
+}
+
+
+nav ul li  a {	
+	display: block;
+	padding:0 10px 0 0;
+	text-decoration: none;
+	font-weight: 700;
+	color: #fff;
+	border:none;
+	font-family: 'Nunito', Arial, serif; 
+	font-size:1em;
+}
+
+nav ul li  a:hover {
+	text-decoration: underline;
+    color:#fff;
+}
+/* content section */
+
+.content1 { 
+	padding-top:160px; 
+	color:#fff; 
+	font-family: 'Nunito', Arial, serif; 
+	font-weight: 700; 
+	font-size:3em;
+}
+
+.content2 {
+	color:#fff; 
+	font-family: 'Nunito', Arial, serif; 
+	font-weight: 400; 
+	font-size:2em;
+
+}
+
+.content3{
+	color:#625e5f; 
+	font-family: 'Nunito', Arial, serif; 
+	font-weight: 400; 
+	font-size:1.5em;
+}
+
+.content3 ul{
+	list-style-type:none; 
+	border: dashed 2px #fff; 
+	box-shadow: 0 0 0 6px #333333; /* bleeds in the background to make the border looks smother.*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	}
+
+
+/*.fbox
+{
+	height: 50px; 
+	width:  160px; 
+	border: 2px solid #fff; 
+	background-color: green; 
+	text-align:center; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+}
+
+*/
+
+.fbox {
+    margin-top:25px;
+	height: 50px; 
+	width:  160px; 
+	background-color: #333333; 
+	text-align:center; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	color:#fff;
+}
+
+.fbox p:hover {
+	background:#fff;
+	color:#333333;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+}
+
+.fbox p {
+    padding: 10px;
+    text-align:center;
+	font-family: 'Nunito', Arial, serif; 
+	font-weight: 400; 
+	font-size:1.5em;
+	border: 2px solid #fff; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+}
+
+/* Footer and Validators */
+#footer {padding-left:40%; padding-top:20px;}
+
+#co {
+	margin-top:30px;
+    font-family: 'Nunito', Arial, serif; 
+	font-weight: 400; 
+	font-size:.8em;
+	margin-left: 330px;
+}
+
+#html5 {display:inline;}
+#css {display:inline;}
+
+
+/* sprite */
+
+.icons {
+	width: 500px;
+	margin: 30px auto 0 auto;
+}
+
+.icons a {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 10px;
+	vertical-align: middle;
+	-o-transition: all .3s;
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-ms-transition: all .3s;
+}
+
+
+.icons a.facebook { background: url(../images/social-icons/facebook.png) left top no-repeat; }
+.icons a.github { background: url(../images/social-icons/github.png) left top no-repeat; }
+.icons a.lastfm { background: url(../images/social-icons/lastfm.png) left top no-repeat; }
+.icons a:hover { background-position: left -34px; }
+
+.icons img {margin-top:20px;}

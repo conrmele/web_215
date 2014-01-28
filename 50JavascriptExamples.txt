@@ -1,0 +1,396 @@
+
+//3 using methods, functions and properties 
+//Building a persons body.
+
+function Person(hasArms, hasLegs) {
+    this.hasArms = hasArms || false
+    this.hasLegs = hasLegs || false
+}
+// || false is not required this just help 
+// the value to not return undefined.
+
+function body (upperBody, middleBoddy, lowerBody) {    
+    this.upperBody = upperBody;
+    this.middleBody = middleBody;
+    this.lowerBody = lowerBody;
+}
+
+/*The prototype property allows you to 
+add properties and methods to an object. 
+In this case we are adding 2 legs and 2 arms to the
+body of a person.
+*/
+body.prototype = new Person(2,2);
+
+body.prototype.displaySpecs = function () {
+    document.write(this.upperBody + ", " + this.middleBody + ", " + this.lowerBody + ", " + this.hasArms + ", " + this.hasLegs);
+}
+
+var myBody = new body ("Head", "Torso", "legs");
+
+myBody.displaySpecs();
+
+------------------------------------------------
+
+//1 Replacing text on the screen.
+<div id=ReplaceMe>
+Replace Me
+</div>
+
+<form>
+<input id="txt" type=text style="width: 400">
+<input type=button value="Click me to Change" onclick="ReplaceMe.innerHTML = txt.value">
+</form>
+------------------------------------------------
+
+//1 counting the length of a string 
+//1 returning text to the screen.
+
+var str = "I like cake";
+var strLen = str.length;
+document.write(strLen);
+
+------------------------------------------------
+//1 using method charAt to return a string.
+
+var str = "Web Development";
+var char1 = str.charAt(0); // "W"
+var char2 = str.charAt(1); // "e"
+var lastChar = str.charAt(str.length - 1); // "t"
+
+alert(lastChar);
+
+------------------------------------------------
+
+//1 While Loop
+var sum = 0;
+var number = 1;
+
+while (number <= 50) {  // -- condition
+  sum += number;        // -- body
+  number++;             // -- updater
+}
+
+alert("Sum = " + sum);  // => Sum = 1275
+
+------------------------------------------------
+
+//1 Do while loop.
+
+var sum = 0;
+var number = 1;
+
+do {
+   sum += number;         // -- body
+   number++;              // -- updater
+} while (number <= 50);   // -- condition
+
+alert("Sum = " + sum);    // => Sum = 1275
+
+------------------------------------------------
+
+//2 For loop and addition.
+var sum = 0;
+
+for (var i = 1; i <= 50; i++) {
+   sum = sum + i;
+}
+
+alert("Sum = " + sum);
+
+------------------------------------------------
+//2 Array and For In loop. 
+
+var student = { name:"Rigo", age: 26, degree: "Associates" };
+
+for (var item in student) {
+   alert(student[item]);    
+}
+
+------------------------------------------------
+
+//1 concatenating strings
+var str1 = "Programming";
+var str2 = " is fun";
+var str3 = " and refreshing.";
+var result = str1.concat(str2,str3);
+
+alert(result);
+
+
+------------------------------------------------
+
+//1 Rounding a decimal number
+var num = 5.3;
+var result = Math.ceil(num);
+document.write(result);
+
+------------------------------------------------
+
+//1 hasOwnProperty method
+
+var Student = function(name) {
+    this.name = name;
+}
+Student.prototype.age = 26;
+
+var student = new Student("rigo");
+
+for (var item in student) {
+   if (student.hasOwnProperty(item)) {
+       alert (student[item]); 
+   }
+}
+
+------------------------------------------------
+
+//1 break statement.
+var sum = 0;
+
+for (var i = 1; i <= 10000; i++) {
+   sum += i;
+   if (i === 50) {
+       break;   
+   }
+}
+
+alert("Sum = " + sum);
+
+------------------------------------------------
+//1 continue statement
+for (var i = 1; i <= 10; i++)
+{
+   if ((i % 2) != 0) {
+      continue;
+   }
+   alert(i); 
+}
+
+18
+------------------------------------------------
+
+//1 inserting DOM objects into a variable.
+var myVar = "<h2>Welcome to my how-to page</h2>";
+
+myVar += "<h3>I Will Explain How To Do This Thing</h3>";
+myVar += "<p>First, grab yourself a new clean ...<p>";
+myVar += "<p>Second, be sure to insert it firmly into ...<p>";
+
+document.write(myVar);
+
+------------------------------------------------
+
+//1 public property "author" can be access outside
+// the function.
+function Book () {
+    this.author = "James Joyce";
+    this.getAuthor = function() {
+        return this.author;
+    }
+}
+var book = new Book();
+
+alert(book.author);       
+alert(book.getAuthor());
+
+------------------------------------------------
+// operators
+
+var str1 = "Hello";
+var str2 = " Rigo";
+str1 = str1 + str2;      
+alert(str1);
+
+var str1 = "Hello";
+var str2 = " Rigo";
+str1 += str2;       // same result note += sign.
+alert(str1);
+
+
+var diff1 = 3 - 1;  
+var diff2 = 4 - 1;   
+alert(diff1 == diff2); // False
+
+
+var diff1 = 3 - 1;   
+var diff2 = 4 - 2;   
+alert(diff1 == diff2); // True
+
+
+alert("2" === 2);           // => false
+alert(true === !false)
+
+//if statement.
+// + operator
+
+var x = 5;
+if (x > 5 & x < 8) {
+    alert(true);
+} else {
+    alert(false);
+}
+
+------------------------------------------------
+// types of arrays.
+
+// empty array
+var empty = [];                       
+
+// array with 2 string elements
+var days = ["Sunday", "Monday"];      
+
+// array with elements of different types
+var mixed = [false, 2.70, "Hello"];   
+
+// elements can be arbitrary expressions
+var suffix = "tree";
+var trees = ["Oak" + suffix, "Elm" + suffix];  
+
+// 2 dimensional array with object literals
+var array2 = [[1,{x:1, y:2}], [2, {x:3, y:4}]];    
+
+// the 3rd element is undefined
+var colors = ["Red", "Green", undefined];    
+
+// no value in the 1st element, it is undefined
+var hobbies = [,"Art"];
+
+33
+------------------------------------------------
+
+//1 Read Items inside of an array.
+
+var cars = [];
+cars[0] = "Ford"; 
+cars[1] = "BMW";
+cars[2] = "Honda";
+
+for (var i = 0, len = cars.length; i < len; i++) {
+    alert(cars[i]); 
+}
+
+
+------------------------------------------------
+
+//1 deleting an element inside of an array.
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday"];
+delete days[2]; 
+
+alert(days[2]);          
+alert(days.length);  
+
+------------------------------------------------
+
+//1 splice an array.
+var letters = ["a","b","c","d"];
+alert(letters.splice(1, 2, "e", "f", "g"));
+alert(letters);  
+
+------------------------------------------------
+
+//1 Push values to an array.
+//1 Pop (delete last value of an array).
+var days = ["Monday"];
+
+days.push("Tuesday", "Wednesday <br>");  
+document.write(days);                      
+days.pop();  
+document.write(days);   
+document.write("<br>"); 
+days.push("Wednesday");  
+document.write(days);
+------------------------------------------------
+
+//1 unshift puts items at the begining of an array.
+//1 shift removes the array.
+var days = ["Wednesday"];
+
+days.unshift("Monday", "Tuesday");
+document.write("<br>");    
+document.write(days) 
+document.write("<br>");                         
+days.shift();  
+document.write("<br>");               
+days.shift();
+document.write("<br>"); 
+document.write(days); 
+
+------------------------------------------------
+// Less than.
+
+var v1 = 4;
+var v2 = 7;
+document.write(v1 < v2);
+
+// greater than
+var v1 = 4;
+var v2 = 7;
+document.write(v1 > v2);
+
+// less than or equals to
+var v1 = 5;
+var v2 = 5;
+document.write(v1 <= v2);
+
+------------------------------------------------
+// return the largest number
+
+var result = Math.max(3,8,5,2);
+document.write(result); // 8
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
